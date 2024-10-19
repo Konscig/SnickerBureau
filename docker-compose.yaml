@@ -1,0 +1,13 @@
+services:
+  db:
+    container_name: "SneakerBureau"
+    image: postgres
+    
+    environment: 
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWD}
+      POSTGRES_DB: ${POSTGRES_DB}
+    ports:
+      - ${POSTGRES_PORT}:5432
+    env_file: ".env"
+    
